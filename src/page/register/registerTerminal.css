@@ -1,0 +1,108 @@
+
+/* ========== BOX ========== */
+
+.registerTerminalConteneur {
+    background: linear-gradient(40deg, rgb(15, 15, 22), rgb(36, 40, 64));
+    height: 100vh;
+    font-family: 'Playfair Display', serif;
+}
+
+.registerTerminalConteneur .loginSection {
+    display: flex;
+    justify-content: center;
+}
+
+.registerTerminalConteneur .inputSection {
+    background-color: rgb(52, 57, 87);
+    border-radius: 1vh;
+    box-shadow: 4px 4px 0px rgb(70, 77, 117);
+    justify-content: space-between;
+    padding: 5vh;
+    margin-top: 7vh;
+}
+
+.registerTerminalConteneur .haut {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+}
+
+.registerTerminalConteneur .bas {
+    margin-top: 10vh;
+}
+
+/* ========== BOUTON ========== */
+
+.registerTerminalConteneur .passwordSection {
+    position: relative;
+}
+
+.registerTerminalConteneur .haut button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.registerTerminalConteneur .haut button:hover {
+    filter: brightness(110%);
+}
+
+/*  CONNEXION  */
+
+.registerTerminalConteneur .bas button {
+    margin-top: 3vh;
+    padding: 1.5vh 2vh;
+    color: white;
+    border-radius: 0.5vh;
+    width: 100%;
+    border: 1px solid white;
+    background-color: rgb(52, 57, 87);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    filter: brightness(100%);
+}
+
+.registerTerminalConteneur .bas button:hover {
+    scale: 105%;
+    box-shadow: 2px 2px 0px rgb(255, 255, 255);
+}
+
+.registerTerminalConteneur .bas button:target {
+    filter: brightness(150%);
+}
+
+.registerTerminalConteneur .inputSection input {
+    font-family: 'Playfair Display', serif;
+    padding: 1.5vh 2vh;
+    background-color: rgb(36, 40, 64);
+    color: white;
+    border-radius: 0.5vh;
+    width: 50vh;
+    border: none;
+    outline: none;
+    margin-bottom: 0.5vh;
+}
+
+.registerTerminalConteneur input::placeholder {
+    color: rgb(212, 212, 212);
+}
+
+/* ========== AUTRE ========== */
+
+.registerTerminalConteneur .pasDeCompte {
+    color: white;
+}
+
+.registerTerminalConteneur .erreur {
+    color: white;
+    background-color: brown;
+    padding: 2vh 3vh;
+}
+
+.registerTerminalConteneur h3 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10vh;
+}
