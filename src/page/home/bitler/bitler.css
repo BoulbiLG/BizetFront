@@ -1,0 +1,16 @@
+.bitlerConteneur {
+    margin-left: 5vh;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+.bitlerConteneur .autreConteneur {
+    display: flex;
+    justify-content: center;
+}
+
+.bitlerConteneur .description {
+    margin: 0;
+    max-width: 50vh;
+    text-align: center;
+}

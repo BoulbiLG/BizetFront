@@ -1,14 +1,48 @@
 .commentaireConteneur {
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.commentaireConteneur .poster {
+    display: flex;
+    justify-content: center;
+}
+
+.commentaireConteneur .secondConteneur {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.commentaireConteneur .carteCommentaire {
+    background-color: rgb(47, 47, 69);
+    padding: 2vh;
+    margin: 1vh 0;
+    border-radius: 1vh;
+}
+
+.commentaireConteneur .carteCommentaire p {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    color: white;
+}
+
+.commentaireConteneur .carteCommentaire p.pseudo {
+    font-size: 1.3rem;
+}
+
+.commentaireConteneur .carteCommentaire p.date {
+    font-size: 0.8rem;
+    margin-bottom: 2vh;
 }
 
 .commentaireConteneur .centre {
     color: white;
-    width: 100vh;
+    width: 100%;
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
+    margin-bottom: 3vh;
 }
 
 .commentaireConteneur button {
@@ -37,6 +71,7 @@
 }
 
 .commentaireConteneur textarea {
+    background-color: inherit;
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
     resize: none;
@@ -47,7 +82,6 @@
     outline: none;
     color: white;
     border: 3px solid white;
-    background-color: transparent;
     border-radius: 1vh;
 }
 

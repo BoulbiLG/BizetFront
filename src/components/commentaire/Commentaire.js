@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import './commentaire.css';
 
-import {envoieCommentaire} from './API';
+import {envoieCommentaire, recuperationCommentaire} from './API';
 
 import Bouton from '../bouton/Bouton';
 
@@ -17,7 +17,7 @@ const Commentaire = ({ identifiant }) => {
     }
 
     const recuperationCommentaireBrut = async (identifiant) => {
-        try {const commentaireEnvoie = await envoieCommentaire(identifiant);commentaireDataSet(identifiant)} 
+        try {const commentaireRecuperation = await recuperationCommentaire(identifiant);commentaireDataSet(commentaireRecuperation)} 
         catch (error) {console.error("Erreur lors de la récupération des données:", error);}
     }
 
@@ -26,13 +26,27 @@ const Commentaire = ({ identifiant }) => {
     }, [identifiant]);
     return (
         <div className='commentaireConteneur'>
-            <div className="centre2">
-                
-            </div>
-            <div className="centre">
-                <p>Poster un commentaire</p>
-                <textarea value={commentaire} onChange={(event) => {commentaireSet(event.target.value)}} placeholder='Ecrivez un commentaire...' name="" id="" cols="" rows=""></textarea>
-                <Bouton label="Poster le commentaire" onClick={() => {envoieCommentaireBrut()}}/>
+            <div className="secondConteneur">
+                <div className="centre">
+                    <p>Poster un commentaire</p>
+                    <textarea value={commentaire} onChange={(event) => {commentaireSet(event.target.value)}} placeholder='Ecrivez un commentaire...' name="" id="" cols="" rows=""></textarea>
+                    <div className="poster">
+                        <Bouton label="Poster le commentaire" onClick={() => {envoieCommentaireBrut()}}/>
+                    </div>
+                </div>
+                <div className="centre2">
+                    {commentaireData.map((entry) => (
+                        <div className='carteCommentaire'>
+                            <div className="haut">
+                                <p className='pseudo'>{entry.pseudo}</p>
+                                <p className='date'>{entry.date}</p>
+                            </div>
+                            <div className="commentaireZone">
+                                <p className='commentaire'>{entry.commentaire}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )

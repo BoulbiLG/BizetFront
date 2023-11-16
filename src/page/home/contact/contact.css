@@ -1,0 +1,31 @@
+.contactConteneur {
+    margin-left: 5vh;
+}
+
+.contactConteneur .section1 {
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+.contactConteneur .section1 p {
+    max-width: 50vh;
+    margin-bottom: 5vh;
+}
+
+.contactConteneur a {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(67, 58, 130);
+    border-radius: 1vh;
+    padding: 2vh 6vh;
+    transition: all 0.2s;
+}
+
+.contactConteneur a:hover {
+    scale: 105%;
+    filter: brightness(120%);
+}
+
+.contactConteneur a:active {
+    filter: brightness(150%);
+}

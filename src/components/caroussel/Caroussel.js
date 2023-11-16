@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './caroussel.css';
 
 const Carrousel = ({ donnees }) => {
-    const [currentIndex, setCurrentIndex] = useState(1); // Démarre à l'index 1
+    const [currentIndex, setCurrentIndex] = useState(1);
 
     const previousVideo = () => {
         setCurrentIndex((prevIndex) =>
@@ -21,7 +21,7 @@ const Carrousel = ({ donnees }) => {
         <div className="carrouselConteneur">
             <div className="autreConteneur">
                 <div>
-                    <button onClick={previousVideo} disabled={donnees.length === 1 || currentIndex === 1}>Suivant</button>
+                    <button onClick={previousVideo} disabled={donnees.length === 1 || currentIndex === 1}>Precedent</button>
                 </div>
                 <div className="carteVocaroo">
                     <div className="information">
@@ -39,7 +39,7 @@ const Carrousel = ({ donnees }) => {
                     ></iframe>
                 </div>
                 <div>
-                    <button onClick={nextVideo} disabled={donnees.length === 1 || currentIndex === donnees.length}>Precedent</button>
+                    <button onClick={nextVideo} disabled={donnees.length === 1 || currentIndex === donnees.length}>Suivant</button>
                 </div>
             </div>
         </div>

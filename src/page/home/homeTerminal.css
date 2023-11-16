@@ -9,7 +9,7 @@
     flex-direction: column;
     height: 82vh;
     justify-content: space-between;
-    margin-right: 5vh;
+    
 }
 
 .homeTerminalConteneur .sectionOnglet button {
@@ -43,4 +43,5 @@
     width: 100%;
     border-radius: 2vh;
     box-shadow: 4px 4px 0px rgb(70, 77, 117);
+    margin-bottom: 5vh;
 }

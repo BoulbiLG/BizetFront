@@ -8,14 +8,15 @@ import Input from '../../components/input/Input';
 import Bouton from '../../components/bouton/Bouton';
 import NavBar from '../../components/navBar/NavBar';
 
-const LoginTerminal = () => {
+import { useGlobalFenetreAlaUneContext } from '../../variableGlobal/fenetreAlaUne';
 
+const LoginTerminal = () => {
 
 
   // ============================= DECLARATION VARIABLE ============================= //
 
 
-
+  const { globalFenetreAlaUne, globalFenetreAlaUneSet } = useGlobalFenetreAlaUneContext();
   const navigate = useNavigate();
   const [statusConnexion, statusConnexionSet] = useState('');
 
@@ -45,11 +46,12 @@ const LoginTerminal = () => {
   
         const { user_data } = response.data;
   
-        sessionStorage.setItem('pseudo', user_data.pseudo);
+        sessionStorage.setItem('username', user_data.username);
         sessionStorage.setItem('email', user_data.email);
         sessionStorage.setItem('auth', 'true');
+        globalFenetreAlaUneSet('liste')
   
-        navigate('/profil');
+        navigate('/');
       } catch (error) {
         console.log('Error:', error);
         //setError('Erreur de connexion. Veuillez vérifier vos informations.');

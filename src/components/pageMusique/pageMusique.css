@@ -4,20 +4,31 @@
     color: white;
 }
 
+.AlaUneConteneur .centrePageMusique {
+    display: flex;
+    justify-content: center;
+}
+
 .AlaUneConteneur .horizontal {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-top: 10vh;
 }
 
 .AlaUneConteneur .pageContenu {
     font-family: 'Playfair Display', serif;
+    padding: 0 5vh;
 }
 
 .AlaUneConteneur .pageMusique .titre {
     color: white;
     display: flex;
     justify-content: center;
+}
+
+.AlaUneConteneur .pageMusique {
+    width: 100vh;
 }
 
 .AlaUneConteneur .pageMusique .info {
@@ -61,18 +72,15 @@
 .AlaUneConteneur .integration {
     display: flex;
     justify-content: flex-start;
-    overflow-x: scroll;
 }
 
 .AlaUneConteneur .fin {
     color: white;
-    margin-left: 5vh;
     position: relative;
+    display: flex;
 }
 
 .AlaUneConteneur .boutonAction {
-    position: absolute;
-    bottom: 0;
     display: flex;
 }
 
@@ -110,4 +118,10 @@
 
 .AlaUneConteneur .likeConteneur {
     display: flex;
+}
+
+.AlaUneConteneur p.contenu {
+    font-size: 0.8rem;
+    font-style: italic;
+    letter-spacing: 0.2vh;
 }

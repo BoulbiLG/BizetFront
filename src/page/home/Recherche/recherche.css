@@ -1,44 +1,37 @@
 /* ==================== LISTE ==================== */
 
-.AlaUneConteneur .musiqueAlaUne {
+.rechercheConteneur .musiqueAlaUne {
     font-family: 'Playfair Display', serif;
     display: flex;
     margin-left: 5vh;
     flex-direction: column;
+    margin-top: 1vh;
 }
 
-.AlaUneConteneur .section1 {
+.rechercheConteneur .musiqueAlaUne input.recherche {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 1vh;
     color: white;
-}
-
-.AlaUneConteneur .section1 .haut {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.AlaUneConteneur .section1 h3 {
-    font-size: 2rem;
-    margin: 0;
+    outline: none;
+    border-radius: 0.5vh;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    width: 35vh;
     margin-bottom: 1vh;
 }
 
-.AlaUneConteneur .section1 p {
-    margin: 0;
-    font-size: 1.5rem;
+.rechercheConteneur .musiqueAlaUne input.recherche::placeholder {
+    color: white;
 }
 
-.AlaUneConteneur .section1 .avertissement {
-    margin-top: 3vh;
-    margin-bottom: 5vh;
-    font-size: 0.8rem;
-}
-
-.AlaUneConteneur .listeMusiqueAlaUne {
+.rechercheConteneur .listeCarte {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.AlaUneConteneur .carteMusique {
+.rechercheConteneur .carteMusique {
+    margin-bottom: 1vh;
     margin-right: 1vh;
     display: flex;
     flex-direction: column;
@@ -46,8 +39,8 @@
     color: white;
     background-color: rgb(39, 42, 56);
     position: relative;
-    flex: 1;
     max-width: 40vh;
+    width: 40vh;
     height: 25vh;
     border-radius: 1vh;
     overflow: hidden;
@@ -57,19 +50,19 @@
     border: 3px solid transparent;
 }
 
-.AlaUneConteneur .carteMusique:hover {
+.rechercheConteneur .carteMusique:hover {
     filter: brightness(120%);
     border: 3px solid white;
 }
 
-.AlaUneConteneur .carteMusique .image {
+.rechercheConteneur .carteMusique .image {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.AlaUneConteneur .carteMusique .haut {
+.rechercheConteneur .carteMusique .haut {
     background-color: rgba(0, 0, 0, 0.438);
     margin: 0;
     width: 100%;
@@ -77,17 +70,17 @@
     box-sizing: border-box;
 }
 
-.AlaUneConteneur .carteMusique p.titre {
+.rechercheConteneur .carteMusique p.titre {
     font-size: 1.2rem;
     margin: 0;
 }
 
-.AlaUneConteneur .carteMusique p.contenu {
+.rechercheConteneur .carteMusique p.contenu {
     font-size: 0.8rem;
     margin: 0;
 }
 
-.AlaUneConteneur .carteMusique .texte {
+.rechercheConteneur .carteMusique .texte {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -97,7 +90,7 @@
     width: 100%;
 }
 
-.AlaUneConteneur .carteMusique button {
+.rechercheConteneur .carteMusique button {
     background-color: rgb(52, 57, 87);
     color: white;
     padding: 1.5vh 3vh;
@@ -112,10 +105,10 @@
     font-weight: 600;
 }
 
-.AlaUneConteneur .carteMusique button:hover {
+.rechercheConteneur .carteMusique button:hover {
     filter: brightness(120%);
 }
 
-.AlaUneConteneur .carteMusique button:active {
+.rechercheConteneur .carteMusique button:active {
     filter: brightness(150%);
 }

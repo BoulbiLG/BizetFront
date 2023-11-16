@@ -40,39 +40,43 @@ const AlaUne = ({ identifiant }) => {
 
     return (
         <div className='AlaUneConteneur'>
-            <div className="pageMusique">
-            { donneMusiqueInfo && donneMusiqueLien ? (
-                <>
-                {donneMusiqueInfo.map((info) => (
-                    <div className='pageContenu'>
-                    <div className="titre">
-                        <div className="info">
-                        <h1>{info.titre}</h1>
-                        <p className='de'>De</p>
-                        <div className='parution'><p className='compositeur'>{info.compositeur}</p><p>, paru en {info.date}</p></div>
+            <div className="centrePageMusique">
+                <div className="pageMusique">
+                { donneMusiqueInfo && donneMusiqueLien ? (
+                    <>
+                    {donneMusiqueInfo.map((info) => (
+                        <div className='pageContenu'>
+                        <div className="titre">
+                            <div className="info">
+                            <h1>{info.titre}</h1>
+                            <p className='de'>De</p>
+                            <div className='parution'><p className='compositeur'>{info.compositeur}</p><p>, paru en {info.date}</p></div>
+                            </div>
                         </div>
-                    </div>
-                    <div className="horizontal">
-                    <div className="integration">
-                        <Carrousel donnees={donneMusiqueLien}/>
+                        <div className="horizontal">
+                        <div className="integration">
+                            <Carrousel donnees={donneMusiqueLien}/>
+                            </div>
+                            <div className="fin">
+                                <div className='autre'>
+                                    <p className='contenu'>Pour {info.contenu}</p>
+                                    <p className='description'>{info.info}</p>
+                                    <div className="boutonAction">
+                                    <button onClick={() => {globalFenetreAlaUneSet('liste')}}>Retour à la liste</button>
+                                    {/*<div className="likeConteneur">
+                                    <button className='like' onClick={() => {envoieLikeBrut(info.like, identifiant)}}></button>
+                                    <p>{info.like}</p>
+                                    </div>*/}
+                                </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="fin">
-                        <p className='contenu'>Pour {info.contenu}</p>
-                        <p className='description'>{info.info}</p>
-                        <div className="boutonAction">
-                            <button onClick={() => {globalFenetreAlaUneSet('liste')}}>Retour à la liste</button>
-                            {/*<div className="likeConteneur">
-                            <button className='like' onClick={() => {envoieLikeBrut(info.like, identifiant)}}></button>
-                            <p>{info.like}</p>
-                            </div>*/}
                         </div>
-                        </div>
-                    </div>
-                    </div>
-                ))}
-                <Commentaire identifiant={identifiant}/>
-                </>
-            ) : null }
+                    ))}
+                    <Commentaire identifiant={identifiant}/>
+                    </>
+                ) : null }
+                </div>
             </div>
         </div>
     );
