@@ -21,7 +21,7 @@ const Carrousel = ({ donnees }) => {
         <div className="carrouselConteneur">
             <div className="autreConteneur">
                 <div>
-                    <button onClick={previousVideo} disabled={donnees.length === 1 || currentIndex === 1}><span class="material-symbols-outlined">keyboard_arrow_left</span></button>
+                    <button onClick={previousVideo} disabled={donnees.length === 1 || currentIndex === 1}>Suivant</button>
                 </div>
                 <div className="carteVocaroo">
                     <div className="information">
@@ -39,7 +39,7 @@ const Carrousel = ({ donnees }) => {
                     ></iframe>
                 </div>
                 <div>
-                    <button onClick={nextVideo} disabled={donnees.length === 1 || currentIndex === donnees.length}><span class="material-symbols-outlined">keyboard_arrow_right</span></button>
+                    <button onClick={nextVideo} disabled={donnees.length === 1 || currentIndex === donnees.length}><span class="material-symbols-outlined">Precedent</span></button>
                 </div>
             </div>
         </div>
