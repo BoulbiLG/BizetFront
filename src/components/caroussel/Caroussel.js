@@ -39,7 +39,7 @@ const Carrousel = ({ donnees }) => {
                     ></iframe>
                 </div>
                 <div>
-                    <button onClick={nextVideo} disabled={donnees.length === 1 || currentIndex === donnees.length}><span class="material-symbols-outlined">Precedent</span></button>
+                    <button onClick={nextVideo} disabled={donnees.length === 1 || currentIndex === donnees.length}>Precedent</button>
                 </div>
             </div>
         </div>

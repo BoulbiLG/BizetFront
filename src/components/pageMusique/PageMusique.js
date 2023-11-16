@@ -61,10 +61,10 @@ const AlaUne = ({ identifiant }) => {
                         <p className='description'>{info.info}</p>
                         <div className="boutonAction">
                             <button onClick={() => {globalFenetreAlaUneSet('liste')}}>Retour à la liste</button>
-                            <div className="likeConteneur">
+                            {/*<div className="likeConteneur">
                             <button className='like' onClick={() => {envoieLikeBrut(info.like, identifiant)}}></button>
                             <p>{info.like}</p>
-                            </div>
+                            </div>*/}
                         </div>
                         </div>
                     </div>
