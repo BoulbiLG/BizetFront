@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrlLocal = 'http://localhost:1234';
+const apiUrlLocal = 'https://bizeterieapi.onrender.com';
 
 export const envoieCommentaire = async (commentaire, identifiant) => {
 
