@@ -1,0 +1,113 @@
+/* ==================== PAGE ==================== */
+
+.AlaUneConteneur .carteVocaroo {
+    color: white;
+}
+
+.AlaUneConteneur .horizontal {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.AlaUneConteneur .pageContenu {
+    font-family: 'Playfair Display', serif;
+}
+
+.AlaUneConteneur .pageMusique .titre {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.AlaUneConteneur .pageMusique .info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.AlaUneConteneur .pageMusique .titre h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.AlaUneConteneur .pageMusique .titre .info p.compositeur {
+    margin: 0;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.AlaUneConteneur .pageMusique .titre .info p.de {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.AlaUneConteneur .parution {
+    display: flex;
+    align-items: first baseline;
+    position: relative;
+    margin: 0 auto;
+}
+
+.AlaUneConteneur .description {
+    max-width: 60vh;
+    text-align: justify;
+}
+
+.AlaUneConteneur .material-symbols-outlined {
+    background-color: transparent;
+}
+
+.AlaUneConteneur .integration {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+}
+
+.AlaUneConteneur .fin {
+    color: white;
+    margin-left: 5vh;
+    position: relative;
+}
+
+.AlaUneConteneur .boutonAction {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+.AlaUneConteneur .fin button {
+    margin-right: 1vh;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 3vh;
+    padding: 1vh 2vh;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+}
+
+.AlaUneConteneur .fin span {
+    margin-left: 1vh;
+}
+
+.AlaUneConteneur .fin .like span {
+    margin-left: 0;
+}
+
+.AlaUneConteneur .fin button:hover {
+    scale: 105%;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    box-shadow: 3px 4px 0 rgb(66, 87, 122);
+}
+
+.AlaUneConteneur .likeConteneur {
+    display: flex;
+}

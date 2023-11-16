@@ -11,7 +11,20 @@
     display: flex;
 }
 
+.navBarConteneur .logoSection a {
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.navBarConteneur .logoSection a:hover {
+    scale: 105%;
+}
+
 .navBarConteneur .ongletSection .onglet {
+    font-family: 'Playfair Display', serif;
     text-decoration: none;
 }
 
@@ -40,10 +53,4 @@
 
 .navBarConteneur .register:hover {
     scale: 105%;
-}
-
-.navBarConteneur h1 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 100;
-    color: white;
 }

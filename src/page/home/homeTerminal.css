@@ -1,4 +1,46 @@
 .homeTerminalConteneur {
     background: linear-gradient(40deg, rgb(15, 15, 22), rgb(36, 40, 64));
     height: 100vh;
+    overflow-y: scroll;
+}
+
+.homeTerminalConteneur .sectionOnglet {
+    display: flex;
+    flex-direction: column;
+    height: 82vh;
+    justify-content: space-between;
+    margin-right: 5vh;
+}
+
+.homeTerminalConteneur .sectionOnglet button {
+    background-color: rgb(52, 57, 87);
+    color: white;
+    padding: 1.5vh 3vh;
+    outline: none;
+    border: none;
+    width: 25vh;
+    border-radius: 0.5vh;
+    margin: 1vh 0;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.homeTerminalConteneur .sectionOnglet button:hover {
+    box-shadow: 4px 4px 0px rgb(70, 77, 117);
+    scale: 105%;
+}
+
+.homeTerminalConteneur .secondConteneur {
+    margin-top: 7vh;
+    display: flex;
+    padding: 0 5vh;
+}
+
+.homeTerminalConteneur .sectionFenetre {
+    width: 100%;
+    border-radius: 2vh;
+    box-shadow: 4px 4px 0px rgb(70, 77, 117);
 }

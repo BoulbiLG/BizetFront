@@ -45,7 +45,7 @@ const LoginTerminal = () => {
   
         const { user_data } = response.data;
   
-        sessionStorage.setItem('username', user_data.username);
+        sessionStorage.setItem('pseudo', user_data.pseudo);
         sessionStorage.setItem('email', user_data.email);
         sessionStorage.setItem('auth', 'true');
   
@@ -64,7 +64,7 @@ const LoginTerminal = () => {
         <div className="inputSection">
           <h3>Se connecter</h3>
           <div className="haut">
-            <Input className='email' type="text" placeholder={'Entrez votre adresse Email'} value={emailValue} onChange={(event) => {emailValueSet(event.target.value)}}/>
+            <Input className='email' type="text" placeholder={'Entrez votre pseudonyme'} value={emailValue} onChange={(event) => {emailValueSet(event.target.value)}}/>
             <div className="passwordSection">
               <div className='passwordSection'>
                 <input className='password' type="password" placeholder='Entrez votre mot de passe ' value={passwordValue} onChange={(event) => {passwordValueSet(event.target.value)}}/>

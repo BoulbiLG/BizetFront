@@ -1,0 +1,56 @@
+.commentaireConteneur {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.commentaireConteneur .centre {
+    color: white;
+    width: 100vh;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+.commentaireConteneur button {
+    margin-top: 3vh;
+    padding: 1.5vh 2vh;
+    color: white;
+    border-radius: 0.5vh;
+    border: 1px solid white;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    filter: brightness(100%);
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.commentaireConteneur button:hover {
+    scale: 105%;
+    box-shadow: 2px 2px 0px rgb(255, 255, 255);
+}
+
+.commentaireConteneur button:target {
+    filter: brightness(150%);
+}
+
+.commentaireConteneur textarea {
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    resize: none;
+    width: 100%;
+    height: 20vh;
+    font-size: 1rem;
+    padding: 2vh;
+    outline: none;
+    color: white;
+    border: 3px solid white;
+    background-color: transparent;
+    border-radius: 1vh;
+}
+
+.commentaireConteneur textarea::placeholder {
+    color: white;
+}
