@@ -24,6 +24,9 @@ export const recuperationMusiqueRecherche = async (recherche) => {
         tableau.push(extractedData);
     });
 
+    console.log(tableau);
+    console.log(tableau[0].tag);
+
     return tableau;
   } catch (error) {
     console.error("Erreur lors de la récupération des données:", error);

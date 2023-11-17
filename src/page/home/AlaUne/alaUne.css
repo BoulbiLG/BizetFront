@@ -119,3 +119,74 @@
 .AlaUneConteneur .carteMusique button:active {
     filter: brightness(150%);
 }
+
+
+.AlaUneConteneur .tags {
+    position: absolute;
+    bottom: 7%;
+    margin-left: 1vh;
+}
+
+.AlaUneConteneur .tag {
+    margin-right: 1vh;
+    padding: 1vh;
+    color: black;
+    border-radius: 3vh;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+.AlaUneConteneur .melancolique {
+    background-color: rgb(87, 0, 174);
+    color: white;
+}
+
+.AlaUneConteneur .epique {
+    background-color: rgb(223, 65, 65);
+    color: white;
+}
+
+.AlaUneConteneur .glorieux {
+    background-color: rgb(223, 139, 65);
+    color: white;
+}
+
+.AlaUneConteneur .joyeux {
+    background-color: rgb(224, 187, 40);
+    color: white;
+}
+
+.AlaUneConteneur .noble {
+    background-color: white;
+    color: black;
+}
+
+.AlaUneConteneur .vif {
+    background-color: rgb(213, 223, 75);
+    color: black;
+}
+
+.AlaUneConteneur .nostalgique {
+    background-color: rgb(65, 223, 141);
+    color: black;
+}
+
+.AlaUneConteneur .romantique {
+    background-color: rgb(223, 65, 205);
+    color: white;
+}
+
+.AlaUneConteneur .dramatique {
+    background-color: rgb(179, 0, 255);
+    color: white;
+}
+
+.AlaUneConteneur .lugubre {
+    background-color: rgb(55, 10, 69);
+    color: white;
+}
+
+.AlaUneConteneur .doux {
+    background-color: rgb(133, 173, 243);
+    color: black;
+}
