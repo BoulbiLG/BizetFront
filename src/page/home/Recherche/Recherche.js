@@ -3,9 +3,11 @@ import React, { useState, useEffect } from 'react';
 import './recherche.css';
 
 import { useGlobalFenetreAlaUneContext } from '../../../variableGlobal/fenetreAlaUne';
+import { tagOptions } from './Options';
 
 import { recuperationMusiqueRecherche } from './API';
 import PageMusique from '../../../components/pageMusique/PageMusique';
+import Selector from '../../../components/selector/Selector';
 
 const AlaUne = () => {
 
@@ -15,6 +17,8 @@ const AlaUne = () => {
   const [identifiant, identifiantSet] = useState('');
 
   const [recherche, rechercheSet] = useState('');
+  const [emotion, emotionSet] = useState('');
+  const [typeRecherche, typeRechercheSet] = useState('titre');
 
 
   // ==================== RECUPERATION MUSIQUE A LA UNE ==================== //
@@ -22,18 +26,27 @@ const AlaUne = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {const data = await recuperationMusiqueRecherche(recherche);musiqueAlaUneSet(data);} 
+      try {const data = await recuperationMusiqueRecherche(recherche, emotion);musiqueAlaUneSet(data);} 
       catch (error) {console.error("Erreur lors de la récupération des données:", error);}
     };
     fetchData();
-  }, [recherche]);
+  }, [recherche, emotion]);
 
   return (
     <div className='rechercheConteneur'>
       {globalFenetreAlaUne === 'liste' ? (
         <div className="musiqueAlaUne">
           <div className="input">
-            <input className='recherche' value={recherche} onChange={(event) => {rechercheSet(event.target.value)}} placeholder='Recherchez une musique par titre...' type="text" />
+            <div className="typeRechercheSection">
+              <p>Rechercher des musique par</p>
+              <button className='typeRecherche' onClick={() => {typeRechercheSet('titre'); rechercheSet('');}}>Titre</button>
+              <button className='typeRecherche' onClick={() => {typeRechercheSet('emotion'); emotionSet('');}}>Emotion</button>
+            </div>
+            {typeRecherche === 'titre' ? (
+              <input className='recherche' value={recherche} onChange={(event) => {rechercheSet(event.target.value)}} placeholder='Recherchez une musique par titre...' type="text" />
+            ) : 
+              <Selector value={emotion} options={tagOptions} titreSelecteur='Choisissez une émotion' onChange={(selectedValue) => {emotionSet(selectedValue)}} />
+            }
           </div>
           <div className="listeCarte">
             {musiqueAlaUne.map((entry) => (

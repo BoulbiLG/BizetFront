@@ -1,15 +1,25 @@
 import axios from 'axios';
 
+//https://bizeterieapi.onrender.com
+// http://localhost:1234
 const apiUrlLocal = 'https://bizeterieapi.onrender.com';
 
-export const recuperationMusiqueRecherche = async (recherche) => {
+export const recuperationMusiqueRecherche = async (recherche, emotion) => {
   
   try {
     let response;
     if (recherche == '') {
-      response = await axios.get(`${apiUrlLocal}/recuperationMusiqueRecherche`);
+      if (emotion == '') {
+        response = await axios.get(`${apiUrlLocal}/recuperationMusiqueRecherche`);
+      } else {
+        response = await axios.get(`${apiUrlLocal}/recuperationMusiqueRecherche?emotion=${emotion}`);
+      }
     } else {
-      response = await axios.get(`${apiUrlLocal}/recuperationMusiqueRecherche?recherche=${recherche}`);
+      if (emotion == '') {
+        response = await axios.get(`${apiUrlLocal}/recuperationMusiqueRecherche?recherche=${recherche}`);
+      } else {
+        response = await axios.get(`${apiUrlLocal}/recuperationMusiqueRecherche?recherche=${recherche}&emotion=${emotion}`);
+      }
     }
 
     const tableau = [];

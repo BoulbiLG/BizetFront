@@ -19,6 +19,11 @@
 .carrouselConteneur .information {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1vh;
+}
+
+.carrouselConteneur .information p {
+    margin: 0;
 }
 
 .carrouselConteneur .autreConteneur button {
@@ -43,4 +48,80 @@
     background-color: white;
     color: black;
     box-shadow: 3px 4px 0 rgb(66, 87, 122);
+}
+
+.carrouselConteneur .tagsSection {
+    margin: 0;
+    margin-bottom: 1vh;
+}
+
+.carrouselConteneur .tagsListe {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 1vh;
+}
+
+.carrouselConteneur .tag {
+    margin-right: 1vh;
+    padding: 1vh;
+    color: black;
+    border-radius: 3vh;
+    font-weight: 700;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+}
+
+.carrouselConteneur .melancolique {
+    background-color: rgb(87, 0, 174);
+    color: white;
+}
+
+.carrouselConteneur .epique {
+    background-color: rgb(223, 65, 65);
+    color: white;
+}
+
+.carrouselConteneur .glorieux {
+    background-color: rgb(223, 139, 65);
+    color: white;
+}
+
+.carrouselConteneur .joyeux {
+    background-color: rgb(224, 187, 40);
+    color: white;
+}
+
+.carrouselConteneur .noble {
+    background-color: white;
+    color: black;
+}
+
+.carrouselConteneur .vif {
+    background-color: rgb(213, 223, 75);
+    color: black;
+}
+
+.carrouselConteneur .nostalgique {
+    background-color: rgb(65, 223, 141);
+    color: black;
+}
+
+.carrouselConteneur .romantique {
+    background-color: rgb(223, 65, 205);
+    color: white;
+}
+
+.carrouselConteneur .dramatique {
+    background-color: rgb(179, 0, 255);
+    color: white;
+}
+
+.carrouselConteneur .lugubre {
+    background-color: rgb(55, 10, 69);
+    color: white;
+}
+
+.carrouselConteneur .doux {
+    background-color: rgb(133, 173, 243);
+    color: black;
 }

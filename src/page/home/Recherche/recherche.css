@@ -126,6 +126,7 @@
     border-radius: 3vh;
     font-weight: 700;
     box-sizing: border-box;
+    font-size: 0.8rem;
 }
 
 .rechercheConteneur .melancolique {
@@ -181,4 +182,25 @@
 .rechercheConteneur .doux {
     background-color: rgb(133, 173, 243);
     color: black;
+}
+
+.rechercheConteneur .typeRecherche {
+    text-decoration: none;
+    color: white;
+    padding: 0vh 2vh;
+    background-color: white;
+    border-radius: 1vh;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 0;
+    transition: all 0.2s;
+}
+
+.rechercheConteneur .typeRechercheSection {
+    display: flex;
+    color: white;
+}
+
+.rechercheConteneur .typeRechercheSection p {
+    margin-right: 1vh;
 }

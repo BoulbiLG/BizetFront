@@ -8,14 +8,17 @@ export const envoieCommentaire = async (commentaire, identifiant) => {
 
   if (commentaire !== '' && commentaire !== undefined && commentaire !== null) {
     if (identifiant !== '' && identifiant !== undefined && identifiant !== null) {
-      try {
-        const response = await axios.post(`${apiUrlLocal}/envoieCommentaire?pseudo=${pseudo}&commentaire=${commentaire}&identifiant=${identifiant}`);
-        console.log(response);
+      if (pseudo !== '' && pseudo !== null && pseudo !== 'null' && pseudo !== undefined) {
+        console.log(pseudo)
+        try {
+          const response = await axios.post(`${apiUrlLocal}/envoieCommentaire?pseudo=${pseudo}&commentaire=${commentaire}&identifiant=${identifiant}`);
+          console.log(response);
 
-        return;
-      } catch (error) {
-        console.error("Erreur lors de la récupération des données:", error);
-        throw error;
+          return;
+        } catch (error) {
+          console.error("Erreur lors de la récupération des données:", error);
+          throw error;
+        }
       }
     }
   }

@@ -1,3 +1,16 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(0deg, rgb(15, 15, 22), rgb(36, 40, 64));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
 .App {
   text-align: center;
 }

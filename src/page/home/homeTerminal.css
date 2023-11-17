@@ -1,7 +1,7 @@
 .homeTerminalConteneur {
     background: linear-gradient(40deg, rgb(15, 15, 22), rgb(36, 40, 64));
-    height: 100vh;
-    overflow-y: scroll;
+    height: 100%;
+    padding-top: 1.8vh;
 }
 
 .homeTerminalConteneur .sectionOnglet {
@@ -9,7 +9,6 @@
     flex-direction: column;
     height: 82vh;
     justify-content: space-between;
-    
 }
 
 .homeTerminalConteneur .sectionOnglet button {
