@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 
 import Bouton from '../../components/bouton/Bouton';
 
+import './profil.css';
+
 const ProfilTerminal = () => {
 
   const navigate = useNavigate();
@@ -31,10 +33,16 @@ const ProfilTerminal = () => {
 
   return (
     <div className='profilTerminalConteneur'>
-      <div className="deconnexionDiv">
-        <p>{username}</p>
-        <p>{email}</p>
-        <Bouton  className='deconnexion' label='Logout' onClick={deconnexion} />
+      <div className="contenu">
+        <div className="pseudo">
+          <h5>Votre pseudonyme</h5>
+          <p>{username}</p>
+        </div>
+        <div className="email">
+          <h5>Votre adresse Email</h5>
+          <p>{email}</p>
+        </div>
+        <Bouton className='deconnexion' label='Se deconnecter' onClick={deconnexion} />
       </div>
     </div>
   )

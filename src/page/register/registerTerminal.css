@@ -68,6 +68,12 @@
     box-shadow: 2px 2px 0px rgb(255, 255, 255);
 }
 
+.registerTerminalConteneur .bas button:active {
+    background-color: white;
+    color: black;
+    scale: 110%;
+}
+
 .registerTerminalConteneur .bas button:target {
     filter: brightness(150%);
 }

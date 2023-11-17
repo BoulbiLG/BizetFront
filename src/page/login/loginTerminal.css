@@ -66,6 +66,12 @@
     box-shadow: 2px 2px 0px rgb(255, 255, 255);
 }
 
+.loginTerminalConteneur .bas button:active {
+    scale: 110%;
+    background-color: white;
+    color: black;
+}
+
 .loginTerminalConteneur .bas button:target {
     filter: brightness(150%);
 }

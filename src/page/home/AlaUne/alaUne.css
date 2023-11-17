@@ -18,7 +18,7 @@
 }
 
 .AlaUneConteneur .section1 h3 {
-    font-size: 2rem;
+    font-size: 4rem;
     margin: 0;
     margin-bottom: 1vh;
 }
@@ -29,9 +29,16 @@
 }
 
 .AlaUneConteneur .section1 .avertissement {
+    position: relative;
+    margin: 0 auto;
     margin-top: 3vh;
     margin-bottom: 5vh;
     font-size: 0.8rem;
+    max-width: 40vh;
+}
+
+.AlaUneConteneur .section1 .avertissement span {
+    font-weight: 700;
 }
 
 .AlaUneConteneur .listeMusiqueAlaUne {

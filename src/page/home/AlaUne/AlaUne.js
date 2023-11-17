@@ -35,7 +35,8 @@ const AlaUne = () => {
               <div>
                 <h3 className='titre'>La Bizeterie</h3>
                 <p>est un site internet ayant pour but de <br />faire découvrir le patrimoine musical français</p>
-                <p className='avertissement'>Ce site est hébergé gratuitement, d'où sa lenteur et peux parfois planter. Raffraichissez la page dans ces cas la.</p>
+                <p className='avertissement'>Ce site est hébergé gratuitement, d'où sa lenteur et peux parfois planter. 
+                Raffraichissez la page dans ces cas la. <span>Ce site ne fonctionne pas sur téléphone.</span></p>
               </div>
             </div>
           </div>

@@ -45,7 +45,7 @@ const AlaUne = () => {
             {typeRecherche === 'titre' ? (
               <input className='recherche' value={recherche} onChange={(event) => {rechercheSet(event.target.value)}} placeholder='Recherchez une musique par titre...' type="text" />
             ) : 
-              <Selector value={emotion} options={tagOptions} titreSelecteur='Choisissez une émotion' onChange={(selectedValue) => {emotionSet(selectedValue)}} />
+              <Selector className='emotionSelecteur' value={emotion} options={tagOptions} titreSelecteur='Choisissez une émotion' onChange={(selectedValue) => {emotionSet(selectedValue)}} />
             }
           </div>
           <div className="listeCarte">

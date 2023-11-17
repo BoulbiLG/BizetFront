@@ -1,0 +1,67 @@
+.profilTerminalConteneur {
+    margin-top: 1vh;
+    margin-left: 5vh;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+.profilTerminalConteneur p {
+    margin: 0;
+}
+
+.profilTerminalConteneur .pseudo h5 {
+    margin: 0;
+    margin-bottom: 1vh;
+    font-size: 1.2rem;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+}
+
+.profilTerminalConteneur .pseudo p {
+    font-style: italic;
+    font-weight: 700;
+}
+
+.profilTerminalConteneur .pseudo {
+    margin-bottom: 5vh;
+}
+
+.profilTerminalConteneur .email {
+    margin-bottom: 5vh;
+}
+
+.profilTerminalConteneur .email h5 {
+    margin: 0;
+    margin-bottom: 1vh;
+    font-size: 1.2rem;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+}
+
+.profilTerminalConteneur .email p {
+    font-style: italic;
+    font-weight: 700;
+}
+
+.profilTerminalConteneur button {
+    background-color: transparent;
+    color: rgb(188, 61, 61);
+    width: 20vh;
+    padding: 1vh;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    border: 1px solid rgb(188, 61, 61);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.profilTerminalConteneur button:hover {
+    background-color: rgb(188, 61, 61);
+    color: white;
+    scale: 105%;
+}
+
+.profilTerminalConteneur button:active {
+
+}
