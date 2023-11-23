@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrlLocal = 'https://bizeterieapi.onrender.com';
+const apiUrlLocal = 'https://bizeterieapi-l0al.onrender.com';
 // https://bizeterieapi.onrender.com
 // http://localhost:1234
 
@@ -19,6 +19,8 @@ export const recuperationMusiqueAlaUne = async () => {
         });
         tableau.push(extractedData);
     });
+
+    console.log(tableau);
 
     return tableau;
   } catch (error) {

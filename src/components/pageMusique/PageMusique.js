@@ -4,7 +4,7 @@ import { useGlobalFenetreAlaUneContext } from '../../variableGlobal/fenetreAlaUn
 
 import './pageMusique.css';
 
-import { recuperationMusiqueLien, recuperationMusiqueInfo, envoieLike } from './API';
+import { recuperationMusiqueLien, recuperationMusiqueInfo } from './API';
 import Carrousel from '../caroussel/Caroussel';
 import Commentaire from '../commentaire/Commentaire';
 
@@ -19,10 +19,12 @@ const AlaUne = ({ identifiant }) => {
 
     // ==================== ENVOIE LIKE ==================== //
 
+    /*
     const envoieLikeBrut = async (like, identifiant) => {
         try {const likeEnvoie = await envoieLike(like, identifiant);selectionDonnePageMusique(identifiant)} 
         catch (error) {console.error("Erreur lors de la récupération des données:", error);}
     };
+    */
 
 
     // ==================== SELECTION DONNEE PAGE MUSIQUE ==================== //

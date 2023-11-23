@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrlLocal = 'https://bizeterieapi.onrender.com';
+const apiUrlLocal = 'https://bizeterieapi-l0al.onrender.com';
 
 export const recuperationMusiqueLien = async (identifiant) => {
     console.log('identifiant API : ', identifiant);

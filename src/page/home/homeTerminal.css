@@ -1,7 +1,7 @@
 .homeTerminalConteneur {
     background: linear-gradient(40deg, rgb(15, 15, 22), rgb(36, 40, 64));
     height: 100%;
-    padding-top: 1.8vh;
+    padding-bottom: 1.5vh;
 }
 
 .homeTerminalConteneur .sectionOnglet {
@@ -14,7 +14,7 @@
 .homeTerminalConteneur .sectionOnglet button {
     background-color: rgb(52, 57, 87);
     color: white;
-    padding: 1.5vh 3vh;
+    padding: 1.5vh 2vh;
     outline: none;
     border: none;
     width: 25vh;
@@ -24,12 +24,18 @@
     transition: all 0.2s;
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
-    font-weight: 600;
+    letter-spacing: 0.1vh;
 }
 
 .homeTerminalConteneur .sectionOnglet button:hover {
+    box-shadow: 3px 3px 0px rgb(70, 77, 117);
+    scale: 102%;
+    filter: brightness(130%);
+}
+
+.homeTerminalConteneur .sectionOnglet button:active {
     box-shadow: 4px 4px 0px rgb(70, 77, 117);
-    scale: 105%;
+    filter: brightness(200%);
 }
 
 .homeTerminalConteneur .secondConteneur {

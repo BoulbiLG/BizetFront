@@ -116,6 +116,10 @@
     box-shadow: 3px 4px 0 rgb(66, 87, 122);
 }
 
+.AlaUneConteneur .fin button:active {
+    scale: 110%;
+}
+
 .AlaUneConteneur .likeConteneur {
     display: flex;
 }

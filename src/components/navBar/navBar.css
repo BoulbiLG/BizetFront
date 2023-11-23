@@ -42,6 +42,11 @@
     box-shadow: 2px 2px 0px rgb(255, 255, 255);
 }
 
+.navBarConteneur .login:active {
+    background-color: white;
+    color: black;
+}
+
 .navBarConteneur .register {
     padding: 1vh 3vh;
     background-color: white;
@@ -53,4 +58,10 @@
 
 .navBarConteneur .register:hover {
     scale: 105%;
+}
+
+.navBarConteneur .register:active {
+    border: 1px solid white;
+    color: white;
+    background-color: inherit;
 }

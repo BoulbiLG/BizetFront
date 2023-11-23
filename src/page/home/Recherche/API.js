@@ -2,7 +2,7 @@ import axios from 'axios';
 
 //https://bizeterieapi.onrender.com
 // http://localhost:1234
-const apiUrlLocal = 'https://bizeterieapi.onrender.com';
+const apiUrlLocal = 'https://bizeterieapi-l0al.onrender.com';
 
 export const recuperationMusiqueRecherche = async (recherche, emotion) => {
   

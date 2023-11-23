@@ -184,6 +184,7 @@
 }
 
 .rechercheConteneur .typeRecherche {
+    cursor: pointer;
     text-decoration: none;
     color: white;
     padding: 1vh;
@@ -199,6 +200,10 @@
 .rechercheConteneur .typeRecherche:hover {
     background-color: white;
     color: black;
+}
+
+.rechercheConteneur .typeRecherche:active {
+    scale: 110%;
 }
 
 .rechercheConteneur .typeRecherche:active {

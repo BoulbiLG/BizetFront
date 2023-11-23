@@ -23,7 +23,7 @@ const RegisterTerminal = () => {
   const [emailValue, emailValueSet] = useState('');
   const [passwordValue, passwordValueSet] = useState('');
 
-  const apiUrlLocal = 'https://bizeterieapi.onrender.com';
+  const apiUrlLocal = 'https://bizeterieapi-l0al.onrender.com';
 
 
 
