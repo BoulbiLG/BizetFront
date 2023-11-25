@@ -281,4 +281,8 @@
 
     }
 
+    .AlaUneConteneur .carteMusique {
+        width: 100%;
+    }
+
 }
