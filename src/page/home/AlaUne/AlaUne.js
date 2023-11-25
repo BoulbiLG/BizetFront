@@ -34,9 +34,9 @@ const AlaUne = () => {
             <div className="haut">
               <div>
                 <h3 className='titre'>La Bizeterie</h3>
-                <p>est un site internet ayant pour but de <br />faire découvrir le patrimoine musical français</p>
+                <p className='descriptionAlaUne'>est un site internet ayant pour but de <br />faire découvrir le patrimoine musical français</p>
                 <p className='avertissement'>Ce site est hébergé gratuitement, d'où sa lenteur et peux parfois planter. 
-                Raffraichissez la page dans ces cas la. <br /> <span>Ce site ne fonctionne pas sur téléphone.</span></p>
+                Raffraichissez la page dans ces cas la.</p>
               </div>
             </div>
           </div>

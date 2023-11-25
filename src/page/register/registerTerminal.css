@@ -114,6 +114,7 @@
 }
 
 @media screen and (max-width: 600px) {
+
     .registerTerminalConteneur .inputSection input {
         width: 100%;
         box-sizing: border-box;
