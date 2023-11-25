@@ -27,7 +27,6 @@
     border-radius: 0.5vh;
     font-family: 'Playfair Display', serif;
     width: 35vh;
-    margin-bottom: 1vh;
 }
 
 .rechercheConteneur .musiqueAlaUne input.recherche::placeholder {
