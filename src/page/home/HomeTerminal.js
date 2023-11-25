@@ -25,7 +25,7 @@ const HomeTerminal = () => {
 
   const [fenetre, fenetreSet] = useState('A la une');
   const [styleHaut2, styleHaut2Set] = useState({});
-  const [styleMenuBtn, styleMenuBtnSet] = useState({});
+  const [styleMenuBtn, styleMenuBtnSet] = useState({animation: 'arrive 0.2s ease-in-out forwards'});
 
 
   // ==================== ==================== //

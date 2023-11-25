@@ -276,13 +276,20 @@
     }
 
     .AlaUneConteneur .musiqueAffiche {
-        font-size: 2rem !important;
+        font-size: 1.3rem !important;
         display: block;
-
+        margin-top: 0;
     }
 
     .AlaUneConteneur .carteMusique {
         width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .AlaUneConteneur .listeMusiqueAlaUne {
+        width: 100%;
+        padding: 0;
     }
 
 }
