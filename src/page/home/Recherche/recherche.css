@@ -14,8 +14,8 @@
 }
 
 .rechercheConteneur .musiqueAlaUne {
-    max-width: 130vh;
-    width: auto;
+    position: relative;
+    display: flex;
 }
 
 .rechercheConteneur .musiqueAlaUne input.recherche {
@@ -35,6 +35,7 @@
 }
 
 .rechercheConteneur .listeCarte {
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
@@ -123,13 +124,16 @@
 }
 
 .rechercheConteneur .tags {
+    display: flex;
     position: absolute;
-    bottom: 7%;
-    margin-left: 1vh;
+    bottom: 0;
+    flex-direction: column;
 }
 
 .rechercheConteneur .tag {
-    margin-right: 1vh;
+    text-align: center;
+    margin-bottom: 0.5vh;
+    margin-left: 0.5vh;
     padding: 1vh;
     color: black;
     border-radius: 3vh;
@@ -224,10 +228,16 @@
     display: flex;
     color: white;
     align-items: center;
+    align-items: center;
 }
 
 .rechercheConteneur .typeRechercheSection p {
     margin-right: 1vh;
+}
+
+.rechercheConteneur .input {
+    display: flex;
+    align-items: center;
 }
 
 .rechercheConteneur .input select {
@@ -235,7 +245,6 @@
     color: white;
     padding: 1vh;
     border-radius: 0.5vh;
-    margin-bottom: 1vh;
 }
 
 .rechercheConteneur .input select option {
