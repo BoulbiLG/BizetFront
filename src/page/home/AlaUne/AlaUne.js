@@ -40,6 +40,7 @@ const AlaUne = () => {
               </div>
             </div>
           </div>
+          <h3 className='musiqueAffiche'>Musique à l'affiche</h3>
           <div className="listeMusiqueAlaUne">
             {musiqueAlaUne.map((entry) => (
               <div className="carteMusique" key={entry._id} onClick={() => {identifiantSet(entry.identifiant); globalFenetreAlaUneSet('page')}}>

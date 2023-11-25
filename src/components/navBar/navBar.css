@@ -65,3 +65,19 @@
     color: white;
     background-color: inherit;
 }
+
+@media screen and (max-width: 700px) {
+    .navBarConteneur .register {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navBarConteneur {
+        padding: 0 1vh;
+    }
+
+    .navBarConteneur .login {
+        padding: 1vh ;
+    }
+}

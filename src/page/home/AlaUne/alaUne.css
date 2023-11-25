@@ -7,6 +7,13 @@
     flex-direction: column;
 }
 
+.AlaUneConteneur .musiqueAffiche {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-style: italic;
+}
+
 .AlaUneConteneur .section1 {
     color: white;
 }
