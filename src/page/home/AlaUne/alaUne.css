@@ -252,24 +252,34 @@
         font-size: 2rem !important;
     }
 
+    .AlaUneConteneur .listeMusiqueAlaUne {
+        padding: 0 0.5vh 0 0.5vh;
+    }
+
     .AlaUneConteneur .carteMusique {
-        width: 20vh;
         height: 15vh;
-        margin-right: 0.2vh;
-        margin-left: 0.2vh;
-        margin-bottom: 0.2vh;
+        margin-right: 0.5vh;
+        margin-left: 0.5vh;
+        margin-bottom: 0.5vh;
+        box-sizing: border-box;
     }
 
     .AlaUneConteneur .carteMusique .haut p.titre {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .AlaUneConteneur .carteMusique .haut p.contenu {
+        letter-spacing: 0;
         font-size: 0.6rem;
     }
 
     .AlaUneConteneur .tag {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
+    }
+
+    .AlaUneConteneur .tags {
+        display: flex;
+        flex-direction: row;
     }
 
 }
@@ -305,30 +315,6 @@
         width: 100%;
         margin-left: 0;
         margin-right: 0;
-    }
-
-}
-
-@media screen and (max-width: 400px) {
-
-    .AlaUneConteneur .carteMusique {
-        width: 15vh;
-        height: 15vh;
-        margin-right: 0.2vh;
-        margin-left: 0.2vh;
-        margin-bottom: 0.2vh;
-    }
-
-    .AlaUneConteneur .carteMusique .haut p.titre {
-        font-size: 0.5rem;
-    }
-
-    .AlaUneConteneur .carteMusique .haut p.contenu {
-        font-size: 0.5rem;
-    }
-
-    .AlaUneConteneur .tag {
-        font-size: 0.3rem;
     }
 
 }
