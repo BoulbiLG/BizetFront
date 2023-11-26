@@ -146,10 +146,19 @@
     .commentaireConteneur {
         box-sizing: border-box;
         padding: 1vh;
+        margin-bottom: 0;
     }
 
     .commentaireConteneur .secondConteneur {
         margin-top: 0 !important;
+    }
+
+    .commentaireConteneur .centre {
+        margin-bottom: 0;
+    }
+
+    .commentaireConteneur .poster button {
+        margin-top: 2vh;
     }
 
 }
