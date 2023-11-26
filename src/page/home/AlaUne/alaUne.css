@@ -272,10 +272,6 @@
         font-size: 0.5rem;
     }
 
-    .AlaUneConteneur .listeMusiqueAlaUne {
-        width: 100%;
-    }
-
 }
 
 @media screen and (max-width: 500px) {
@@ -311,9 +307,28 @@
         margin-right: 0;
     }
 
-    .AlaUneConteneur .listeMusiqueAlaUne {
-        width: 100%;
-        padding: 0;
+}
+
+@media screen and (max-width: 400px) {
+
+    .AlaUneConteneur .carteMusique {
+        width: 15vh;
+        height: 15vh;
+        margin-right: 0.2vh;
+        margin-left: 0.2vh;
+        margin-bottom: 0.2vh;
+    }
+
+    .AlaUneConteneur .carteMusique .haut p.titre {
+        font-size: 0.5rem;
+    }
+
+    .AlaUneConteneur .carteMusique .haut p.contenu {
+        font-size: 0.5rem;
+    }
+
+    .AlaUneConteneur .tag {
+        font-size: 0.3rem;
     }
 
 }
