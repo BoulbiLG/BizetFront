@@ -17,7 +17,7 @@ const Commentaire = ({ identifiant }) => {
     const [obligationPseudo, obligationPseudoSet] = useState('');
 
     const envoieCommentaireBrut = async () => {
-        try {const commentaireEnvoie = await envoieCommentaire(commentaire, identifiant);recuperationCommentaireBrut(identifiant)} 
+        try {const commentaireEnvoie = await envoieCommentaire(commentaire, identifiant);recuperationCommentaireBrut(identifiant);console.log(commentaireEnvoie)} 
         catch (error) {console.error("Erreur lors de la récupération des données:", error);}
     }
 
@@ -27,7 +27,7 @@ const Commentaire = ({ identifiant }) => {
     }
 
     const obligationConnexion = () => {
-        if (pseudo == '' || pseudo == null || pseudo == undefined) {
+        if (pseudo === '' || pseudo === null || pseudo === undefined) {
             obligationPseudoSet('Vous devez avoir un compte pour poster un commentaire.');
         } else {
             obligationPseudoSet('');
