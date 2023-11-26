@@ -249,3 +249,69 @@
 .rechercheConteneur .input select option {
     color: black;
 }
+
+@media screen and (max-width: 800px) {
+
+    .rechercheConteneur input.recherche {
+        width: 100% !important;
+        max-width: 28vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+
+    .rechercheConteneur select {
+        width: 100% !important;
+        max-width: 28vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+
+    .rechercheConteneur .musiqueAlaUne {
+        margin-left: 0;
+    }
+
+    .rechercheConteneur .input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rechercheConteneur .typeRechercheSection {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .rechercheConteneur .listeMusiqueAlaUne {
+        padding: 0 0.5vh 0 0.5vh;
+    }
+
+    .rechercheConteneur .carteMusique {
+        height: 15vh;
+        margin-right: 0.5vh;
+        margin-left: 0.5vh;
+        margin-bottom: 0.5vh;
+        box-sizing: border-box;
+    }
+
+    .rechercheConteneur .carteMusique .haut p.titre {
+        font-size: 1rem;
+    }
+
+    .rechercheConteneur .carteMusique .haut p.contenu {
+        letter-spacing: 0;
+        font-size: 0.6rem;
+    }
+
+    .rechercheConteneur .tag {
+        font-size: 0.6rem;
+    }
+
+    .rechercheConteneur .tags {
+        display: flex;
+        flex-direction: row;
+    }
+
+}

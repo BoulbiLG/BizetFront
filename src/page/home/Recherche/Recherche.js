@@ -40,8 +40,10 @@ const AlaUne = () => {
             <div className="input">
               <div className="typeRechercheSection">
                 <p>Rechercher des musique par</p>
-                <button className='typeRecherche' onClick={() => {typeRechercheSet('titre'); rechercheSet('');}}>Titre</button>
-                <button className='typeRecherche' onClick={() => {typeRechercheSet('emotion'); emotionSet('');}}>Emotion</button>
+                <div className="centralisationBtn">
+                  <button className='typeRecherche' onClick={() => {typeRechercheSet('titre'); rechercheSet('');}}>Titre</button>
+                  <button className='typeRecherche' onClick={() => {typeRechercheSet('emotion'); emotionSet('');}}>Emotion</button>
+                </div>
               </div>
               {typeRecherche === 'titre' ? (
                 <input className='recherche' value={recherche} onChange={(event) => {rechercheSet(event.target.value)}} placeholder='Recherchez une musique par titre...' type="text" />
@@ -52,7 +54,7 @@ const AlaUne = () => {
             <div className="listeCarte">
               {musiqueAlaUne.map((entry) => (
                 <div className="carteMusique" key={entry._id} onClick={() => {identifiantSet(entry.identifiant); globalFenetreAlaUneSet('page')}}>
-                  <div className="haut">
+                  <div className="hautRecherche">
                     <p className='titre'>{entry.titre}</p>
                     <p className='contenu'>{entry.contenu}</p>
                   </div>
