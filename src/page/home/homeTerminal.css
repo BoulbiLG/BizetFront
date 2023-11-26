@@ -148,6 +148,7 @@
 @media screen and (max-width: 600px) {
     
     .homeTerminalConteneur .haut2 {
+        animation: disparition 0.1s ease-in-out forwards;
         top: 0;
     }
 
