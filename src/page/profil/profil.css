@@ -63,5 +63,23 @@
 }
 
 .profilTerminalConteneur button:active {
+    filter: brightness(130%);
+}
+
+@media screen and (max-width: 600px) {
+    
+    .profilTerminalConteneur {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .profilTerminalConteneur .pseudo {
+        margin-bottom: 3vh;
+    }
+
+    .profilTerminalConteneur .email {
+        margin-bottom: 3vh;
+    }
 
 }

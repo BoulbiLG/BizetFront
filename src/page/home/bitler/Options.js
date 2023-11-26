@@ -97,7 +97,6 @@ export const dataComplete = [
         "section": "false",
         "description": "Bitler aimait beaucoup le délire du khey Revenant sur Le Fou du VIllage Dream. Il a décidé d'en faire un jeu vidéo en HTML CSS JavaScript. Par manque de temps il n'a pas pu le terminé.",
         "lienExterne": ["https://onche.org/topic/234403/jeu-video-fou-du-village-dream-simulator-2d",
-                        "https://mega.nz/folder/FX9hnDLT#5LTLHup0c0cK3ycKFupKhA",
                         "https://fdv-simulator.vercel.app/"],
         "titre": "Fou du VIllage Dream Simulator 2D", 
         "lienInfo": {"lien": "WMaL1UI2aM8?si=L-6g_4GkIpgXr2zl", "type": "youtube"},
@@ -137,6 +136,7 @@ export const dataComplete = [
         "titre": "Musique anti Trapvador", 
         "lienInfo": {"lien": "wrnX9bjQ_bY?si=G46XfhYsl2vB__iJ", "type": "youtube"},
         "sommaire": ["Rien"],
+        "lienExterne": []
     },
     {
         "ID": "cinematique", 
@@ -145,6 +145,7 @@ export const dataComplete = [
         "titre": "Cinématiques du jeu Risifight", 
         "lienInfo": {"lien": "9O01CA36Uho?si=7m7KL3ZD6GIUXg0t", "type": "youtube"},
         "sommaire": ["Rien"],
+        "lienExterne": []
     },
     {
         "ID": "lit", 
@@ -153,5 +154,6 @@ export const dataComplete = [
         "titre": "Le Fou sous le lit dream", 
         "lienInfo": {"lien": "818tILCWuy4?si=5S7Mv7g2dPylZMqd", "type": "youtube"},
         "sommaire": ["Rien"],
+        "lienExterne": []
     },
 ]
