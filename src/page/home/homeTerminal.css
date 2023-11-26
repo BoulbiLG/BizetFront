@@ -129,7 +129,6 @@
 
     .homeTerminalConteneur .secondConteneur {
         padding: 0;
-        
     }
 
     .homeTerminalConteneur .sectionFenetre {
@@ -142,6 +141,32 @@
         left: 0;
         border-radius: 0 10vh 10vh 0;
         padding-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    
+    .homeTerminalConteneur .haut2 {
+        top: 0;
+    }
+
+    .homeTerminalConteneur .centralisationHaut2 {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .homeTerminalConteneur .haut2 {
+        width: 100%;
+        background-color: rgba(70, 77, 117, 0.945);
+        box-sizing: border-box;
+        border-radius: 0;
+    }
+
+    .homeTerminalConteneur .haut2 div {
+        display: flex;
+        justify-content: center;
     }
 
 }
