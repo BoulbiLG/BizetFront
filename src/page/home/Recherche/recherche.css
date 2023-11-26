@@ -290,6 +290,7 @@
 
     .rechercheConteneur .carteMusique {
         height: 15vh;
+        width: 100% !important;
         margin-right: 0.5vh;
         margin-left: 0.5vh;
         margin-bottom: 0.5vh;
