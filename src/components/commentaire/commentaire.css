@@ -140,3 +140,16 @@
 .commentaireConteneur .obligationPseudo button:active {
     filter: brightness(170%);
 }
+
+@media screen and (max-width: 600px) {
+
+    .commentaireConteneur {
+        box-sizing: border-box;
+        padding: 1vh;
+    }
+
+    .commentaireConteneur .secondConteneur {
+        margin-top: 0 !important;
+    }
+
+}
