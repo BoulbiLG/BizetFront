@@ -164,3 +164,36 @@
     width: 100%;
     margin-bottom: 2vh;
 }
+
+@media screen and (max-width: 600px) {
+
+    .bitlerConteneur {
+        margin-left: 0;
+        box-sizing: border-box;
+        padding: 1vh;
+    }
+
+    .bitlerConteneur h1 {
+        font-size: 1.5rem;
+    }
+
+    /* page */
+
+    .bitlerConteneur .pageBitlerConteneur {
+        box-sizing: border-box;
+    }
+
+    .bitlerConteneur .secondConteneurBitler {
+        box-sizing: border-box;
+    }
+
+    .bitlerConteneur iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .bitlerConteneur .sectionVideo {
+        padding: 1vh;
+    }
+
+}
