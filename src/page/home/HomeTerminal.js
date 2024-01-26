@@ -1,129 +1,125 @@
-import React, { useState } from 'react';
-
-import NavBar from '../../components/navBar/NavBar';
-import Bouton from '../../components/bouton/Bouton';
-import AlaUne from './AlaUne/AlaUne';
-import Recherche from './Recherche/Recherche';
-import ProfilTerminal from '../profil/ProfilTerminal';
-import Contact from './contact/Contact';
-import Bitler from './bitler/Bitler';
-
-import { useGlobalFenetreAlaUneContext } from '../../variableGlobal/fenetreAlaUne';
+import React, { useState, useEffect } from 'react';
 
 import './homeTerminal.css';
 
 const HomeTerminal = () => {
 
 
-
-  // ==================== DECLARATION VARIABLE ==================== //
-
-
-  const { globalFenetreAlaUne, globalFenetreAlaUneSet } = useGlobalFenetreAlaUneContext();
-  console.log(globalFenetreAlaUne);
-  const verificationAuth = sessionStorage.getItem('auth');
-
-  const [fenetre, fenetreSet] = useState('A la une');
-  const [styleHaut2, styleHaut2Set] = useState({});
-  const [styleMenuBtn, styleMenuBtnSet] = useState({animation: 'arrive 0.2s ease-in-out forwards'});
+  //==================== CREATION PSEUDO DE BASE ====================//
 
 
-  // ==================== ==================== //
+  let insulteTableau = ['FilsDeViole', 'EnfantDePutain', 'Pédé', 'Pute', 'ClébardPuant', 'FilsDePute'];
+
+  function obtenirInsulteAleatoire() {
+    const indiceAleatoire = Math.floor(Math.random() * insulteTableau.length);
+  
+    const insulteAleatoire = insulteTableau[indiceAleatoire];
+  
+    return insulteAleatoire;
+  }
+  
+  const insulte = obtenirInsulteAleatoire();
+
+  const nombre = Math.floor(Math.random() * 100);
+  
+  console.log(insulte);
+
+
+  //==================== ====================//
+
+
+  const [message, setMessage] = useState('');
+  const [pseudo, setPseudo] = useState(`${insulte + 'N°' + nombre}`);
+  const [messages, setMessages] = useState([]);
+
+  
+  //==================== ENVOIE MESSAGE ====================//
+
+
+  const sendMessage = async () => {
+    setMessage('');
+    try {
+      const response = await fetch('http://localhost:1234/insertionMessage', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ pseudo, message }),
+      });
+
+      const data = await response.json();
+      console.log(data);
+      recupererMessages();
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+
+  //==================== RECUPERATION MESSAGE ====================//
+
+
+  const recupererMessages = async () => {
+    try {
+      const response = await fetch('http://localhost:1234/recuperationMessage');
+      const data = await response.json();
+      if (data.success) {
+        setMessages(data.messages);
+      } else {
+        console.error('Erreur lors de la récupération des messages:', data.error);
+      }
+    } catch (error) {
+      console.error('Erreur:', error);
+    }
+  };
+
+  useEffect(() => {
+    const intervalId = setInterval(recupererMessages, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
 
   return (
     <div className='homeTerminalConteneur'>
-      <NavBar />
-      <div className="secondConteneur">
-        <div className="sectionOnglet">
-          <div className="haut">
-            <Bouton className='alaune ongletFenetre' label='A la une' onClick={() => {fenetreSet('A la une'); globalFenetreAlaUneSet('liste')}} />
-            {/*<Bouton className='decouvrir ongletFenetre' label='Découvrir' onClick={() => {fenetreSet('Découvrir')}} />*/}
-            <Bouton className='rechercher ongletFenetre' label='Rechercher' onClick={() => {fenetreSet('rechercher'); globalFenetreAlaUneSet('liste')}} />
-            {/*<Bouton className='compositeur ongletFenetre' label='Compositeur' onClick={() => {fenetreSet('Compositeur')}} />*/}
-            <Bouton className='mecontacter ongletFenetre' label='Me contacter' onClick={() => {fenetreSet('contact'); globalFenetreAlaUneSet('liste')}} />
-            {/*<Bouton className='discussion ongletFenetre' label='Discussion' onClick={() => {fenetreSet('Discussion')}} />*/}
-            <Bouton className='bitler ongletFenetre' label='Archive de Bitler' onClick={() => {fenetreSet('bitler'); globalFenetreAlaUneSet('liste')}} />
-            { verificationAuth === 'true' ? (
-              <div className="bas">
-                <Bouton className='monprofil ongletFenetre' label='Mon profil' onClick={() => {fenetreSet('profil'); globalFenetreAlaUneSet('liste')}} />
-              </div>
-            ) : null }
-          </div>
-          <div className="centralisationHaut2">
-            <div className="haut2" style={styleHaut2}>
-              <Bouton className='alaune ongletFenetre' label='A la une' onClick={() => {
-                fenetreSet('A la une'); 
-                globalFenetreAlaUneSet('liste');
-                styleHaut2Set({animation: 'disparition 0.2s ease-in-out forwards'});
-                styleMenuBtnSet({animation: 'arrive 0.2s ease-in-out forwards'});
-              }} />
-              {/*<Bouton className='decouvrir ongletFenetre' label='Découvrir' onClick={() => {fenetreSet('Découvrir')}} />*/}
-              <Bouton className='rechercher ongletFenetre' label='Rechercher' onClick={() => {
-                fenetreSet('rechercher'); 
-                globalFenetreAlaUneSet('liste');
-                styleHaut2Set({animation: 'disparition 0.2s ease-in-out forwards'});
-                styleMenuBtnSet({animation: 'arrive 0.2s ease-in-out forwards'});
-              }} />
-              {/*<Bouton className='compositeur ongletFenetre' label='Compositeur' onClick={() => {fenetreSet('Compositeur')}} />*/}
-              <Bouton className='mecontacter ongletFenetre' label='Me contacter' onClick={() => {
-                fenetreSet('contact'); 
-                globalFenetreAlaUneSet('liste');
-                styleHaut2Set({animation: 'disparition 0.2s ease-in-out forwards'});
-                styleMenuBtnSet({animation: 'arrive 0.2s ease-in-out forwards'});
-              }} />
-              {/*<Bouton className='discussion ongletFenetre' label='Discussion' onClick={() => {fenetreSet('Discussion')}} />*/}
-              <Bouton className='bitler ongletFenetre' label='Archive de Bitler' onClick={() => {
-                fenetreSet('bitler'); 
-                globalFenetreAlaUneSet('liste');
-                styleHaut2Set({animation: 'disparition 0.2s ease-in-out forwards'});
-                styleMenuBtnSet({animation: 'arrive 0.2s ease-in-out forwards'});
-              }} />
-              { verificationAuth === 'true' ? (
-                <div className="bas">
-                  <Bouton className='monprofil ongletFenetre' label='Mon profil' onClick={() => {
-                    fenetreSet('profil'); 
-                    globalFenetreAlaUneSet('liste');
-                    styleHaut2Set({animation: 'disparition 0.2s ease-in-out forwards'});
-                    styleMenuBtnSet({animation: 'arrive 0.2s ease-in-out forwards'});
-                  }} />
-                </div>
-              ) : null }
-              <div className="fermerSection">
-                <Bouton className='fermer ongletFenetre' label='Fermer' onClick={() => {
-                  styleHaut2Set({animation: 'disparition 0.2s ease-in-out forwards'});
-                  styleMenuBtnSet({animation: 'arrive 0.2s ease-in-out forwards'});
-                }}/>
-              </div>
+      <div className="haut">
+      <div className='listeMessage'>
+        {messages.map((message, index) => (
+          <div className="message">
+            <div className="messageHaut">
+              <p className='pseudo'>{message.pseudo}</p>
+              <p className='date'>{message.date}</p>
             </div>
-            <div className="menuSectionBtn" style={styleMenuBtn}>
-              <button className='menuOnglet ongletFenetre' label='Menu' onClick={() => {
-                styleHaut2Set({animation: 'arrive 0.2s ease-in-out forwards'});
-                styleMenuBtnSet({animation: 'disparition 0.2s ease-in-out forwards'});
-              }}>Menu</button>
+            <div className="messageBas">
+              <p>{message.message}</p>
             </div>
           </div>
-        </div>
-        <div className="sectionFenetre">
-          { fenetre === 'A la une' ? (
-            <AlaUne />
-          ) : null }
-          { fenetre === 'rechercher' ? (
-            <Recherche />
-          ) : null }
-          { fenetre === 'contact' ? (
-            <Contact />
-          ) : null }
-          { fenetre === 'profil' ? (
-            <ProfilTerminal />
-          ) : null }
-          { fenetre === 'bitler' ? (
-            <Bitler />
-          ) : null }
+        ))}
+    </div>
+      </div>
+      <div className="bas">
+        <div className='listeInput'>
+          <p>Ton Pseudonche</p>
+          <input
+            className='pseudoInput'
+            type='text'
+            placeholder='Ton pseudo ?'
+            value={pseudo}
+            onChange={(e) => setPseudo(e.target.value)}
+          />
+          <p>Ton message</p>
+          <textarea
+            className='messageInput'
+            type='text'
+            placeholder='Ecris un message'
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
+          />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default HomeTerminal
+export default HomeTerminal;
